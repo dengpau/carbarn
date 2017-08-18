@@ -1,0 +1,16 @@
+# 设置使用配置文件   在Java -jar的启动方式中可以直接启动相应配置文件:
+# mvn install;
+# java -jar target/deng-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+server:
+  port: 8080 # 项目端口
+  context-path: /carbarn # 项目名称
+
+spring:
+  profiles:
+    active: dev  #prod 正式环境配置
+
+  jpa: # 配置jpa
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
