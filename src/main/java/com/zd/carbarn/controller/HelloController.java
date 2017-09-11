@@ -2,7 +2,7 @@ package com.zd.carbarn.controller;
 
 
 import com.zd.carbarn.entity.User;
-import com.zd.carbarn.service.UserService;
+import com.zd.carbarn.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -20,6 +20,12 @@ public class HelloController {
     public String getHello(){
 
         return "index";
+    }
+
+    // 跳转至菜单管理页面
+    @GetMapping(value = "/sysMenu")
+    public String sysMenu(){
+        return "sysMenu";
     }
 
     @GetMapping(value = "/all")

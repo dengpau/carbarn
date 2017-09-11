@@ -24,4 +24,6 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     @Query("select count(id) from User where age > ?1 and sex = ?2")
     public int findCountByAge(Integer age, char sex);
 
+    public User findUserByPhoneNumAndPasswd(String phonNum,String passwd);
+
 }

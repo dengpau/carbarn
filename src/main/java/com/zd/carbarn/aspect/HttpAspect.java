@@ -61,7 +61,7 @@ public class HttpAspect {
     //获取拦截请求返回的信息
     @AfterReturning(returning = "object", pointcut = "log()")
     public void getRet(Object object) {
-        logger.info("response={}", object.toString());
+        logger.info("response={}", object != null ? object.toString() : "结果为空");
     }
 
 }
