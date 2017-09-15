@@ -7,7 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
+import java.util.Map;
 
 //@RestController
 @Controller
@@ -17,10 +22,23 @@ public class HelloController {
     private UserService userService;
 
     @GetMapping(value = "/hello" )
-    public String getHello(){
+    public ModelAndView getHello(){
 
-        return "index";
+        return new ModelAndView("index");
     }
+
+    @PostMapping("/saveUser")
+    public ModelAndView saveUser(@Valid User u) {
+        if(u != null) {
+            System.out.println(u.getRealName() + ":" + u.getSex() + "：" + u.getPhoneNum());
+        }else{
+            System.out.println("没有取到值");
+        }
+
+
+        return new ModelAndView("index");
+    }
+
 
     // 跳转至菜单管理页面
     @GetMapping(value = "/sysMenu")

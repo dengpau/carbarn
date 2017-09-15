@@ -1,196 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="renderer" content="webkit">
-
-    <title>首页</title>
-    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
-    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
-
-    <link href="../static/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
-    <link href="../static/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
-
-    <!-- Morris -->
-    <link href="../static/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
-
-    <!-- Gritter -->
-    <link href="../static/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-
-    <link href="../static/css/animate.css" rel="stylesheet">
-    <link href="../static/css/style.css?v=2.2.0" rel="stylesheet">
-
-</head>
+<#include "../header.ftl" >
 
 <body>
     <div id="wrapper">
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="side-menu" style="font-family:Microsoft Yahei">
-                    <li class="nav-header">
+        <#include "../left.ftl">
 
-                        <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="../static/img/profile_small.jpg" />
-                             </span>
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Beaut-zihan</strong>
-                             </span>  <span class="text-muted text-xs block">超级管理员 <b class="caret"></b></span> </span>
-                            </a>
-                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a href="form_avatar.html">修改头像</a>
-                                </li>
-                                <li><a href="profile.html">个人资料</a>
-                                </li>
-                                <li><a href="contacts.html">联系我们</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="login.html">安全退出</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="logo-element">
-                            Car
-                        </div>
-
-                    </li>
-                    <li>
-                        <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">主页</span></a>
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-bank"></i> <span class="nav-label">店铺</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li class="active"><a href="shop.html">店铺信息</a>
-                            </li>
-                            <li><a href="package.html">套餐服务</a>
-                            </li>
-                            <li><a href="chains.html">连锁店铺</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">订单系统</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="order.html">预约订单</a>
-                            </li>
-                            <li><a href="orderBilling.html">开单</a>
-                            </li>
-                            <li><a href="orderBank.html">订单库</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a href="index.html"><i class="fa fa-user"></i> <span class="nav-label">客户信息</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="toastr_notifications.html">客户资料</a>
-                            </li>
-                            <li><a href="nestable_list.html">会员开卡</a>
-                            </li>
-                            <li><a href="timeline_v2.html">微信客户</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="index.html#"><i class="fa fa-car"></i> <span class="nav-label">车辆库</span></a>
-                    </li>
-                    <li>
-                        <a href="mailbox.html"><i class="fa fa-database"></i> <span class="nav-label">库存</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="mailbox.html">仓库信息</a>
-                            </li>
-                            <li><a href="mail_detail.html">库存管理</a>
-                            </li>
-                            <li><a href="mail_compose.html">采购入库</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="index.html#"><i class="fa fa-child"></i> <span class="nav-label">员工管理</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="form_basic.html">员工信息</a>
-                            </li>
-                            <li><a href="form_validate.html">员工考勤</a>
-                            </li>
-                            <li><a href="form_advanced.html">业绩提成</a>
-                            </li>
-                            <li><a href="form_webuploader.html">工资条</a>
-                            </li>
-                            <li><a href="form_wizard.html">工作日志</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="index.html#"><i class="fa fa-rmb"></i> <span class="nav-label">财务系统</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="contacts.html">收支账单</a>
-                            </li>
-                            <li><a href="profile.html">流水明细</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="index.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">数据报表</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="search_results.html">财务报表</a>
-                            </li>
-                            <li><a href="search_results.html">客户数据</a>
-                            </li>
-                            <li><a href="lockscreen.html">项目服务数据</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="index.html#"><i class="fa fa-user-plus"></i> <span class="nav-label">聚客系统</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="typography.html">优惠券</a>
-                            </li>
-                            <li><a href="icons.html">微活动</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="grid_options.html"><i class="fa fa-users"></i> <span class="nav-label">推荐激励</span></a>
-                    </li>
-                    <li>
-                        <a href="index.html#"><i class="fa fa-table"></i> <span class="nav-label">职权分配</span></a>
-                    </li>
-                    <li>
-                        <a href="index.html#"><i class="fa fa-cog"></i> <span class="nav-label">系统设置</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="basic_gallery.html">角色管理</a>
-                            </li>
-                            <li><a href="carousel.html">菜单管理</a>
-                            </li>
-                            <li><a href="carousel.html">系统用户</a>
-                            </li>
-                            <li><a href="carousel.html">系统日志</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
 
         <div id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="index.html#"><i class="fa fa-bars"></i> </a>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="../index.ftl#"><i class="fa fa-bars"></i> </a>
 
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <span class="m-r-sm text-muted welcome-message"><a href="index.html" title="返回首页"><i class="fa fa-home"></i></a>欢迎使用H+后台主题</span>
+                            <span class="m-r-sm text-muted welcome-message"><a href="../index.ftl" title="返回首页"><i class="fa fa-home"></i></a>欢迎使用H+后台主题</span>
                         </li>
 
                         <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="../index.ftl#">
                                 <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
                             </a>
                             <ul class="dropdown-menu dropdown-alerts">
@@ -233,8 +64,68 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="m-b-md">
-                                            <a href="project_detail.html#" class="btn btn-white btn-xs pull-right">编辑店铺</a>
-                                            <h2>XXXXXXX汽车美容店</h2>
+                                            <a href="#" class="btn btn-white btn-xs pull-right" data-toggle="modal"  data-target="#myModal4" >编辑店铺</a>，
+                                            <div class="modal inmodal" id="myModal4" tabindex="-1" role="dialog"  aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content animated fadeIn">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                            <h3 class="modal-title">商家信息</h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="ibox-content">
+                                                                <form method="get" class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">普通</label>
+                                                                        <div class="col-sm-10">
+                                                                            <input type="text" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hr-line-dashed"></div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">带说明信息</label>
+                                                                        <div class="col-sm-10">
+                                                                            <input type="text" class="form-control"> <span class="help-block m-b-none">帮助文本，可能会超过一行，以块级元素显示</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hr-line-dashed"></div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">密码</label>
+
+                                                                        <div class="col-sm-10">
+                                                                            <input type="password" class="form-control" name="password">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hr-line-dashed"></div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label">提示</label>
+
+                                                                        <div class="col-sm-10">
+                                                                            <input type="text" placeholder="提示信息" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hr-line-dashed"></div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-2 control-label">禁用</label>
+
+                                                                        <div class="col-lg-10">
+                                                                            <input type="text" disabled="" placeholder="已被禁用" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hr-line-dashed"></div>
+
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                                            <button type="button" class="btn btn-primary">保存</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2>${sinfo.sellerName}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -243,26 +134,26 @@
                                         <dl class="dl-horizontal">
 
                                             <dt>店主：</dt>
-                                            <dd>张三</dd>
+                                            <dd>${sinfo.sellerBoss}</dd>
                                             <dt>联系方式：</dt>
-                                            <dd>16243564322</dd>
+                                            <dd>${sinfo.bossPhone}</dd>
                                             <dt>Email：</dt>
-                                            <dd>1270532603@qq.com</dd>
+                                            <dd>${sinfo.sellerEmail !}</dd>
                                             <dt>地址：</dt>
-                                            <dd>合肥市包河区青年电子产业园</dd>
+                                            <dd>${sinfo.sellerAddr}</dd>
                                         </dl>
                                     </div>
                                     <div class="col-lg-6" id="cluster_info">
                                         <dl class="dl-horizontal">
 
                                             <dt>创建时间：</dt>
-                                            <dd>2014年 11月07日 22:03</dd>
+                                            <dd>${sinfo.sellerCreate}</dd>
                                             <dt>开通服务：</dt>
-                                            <dd>2014年 02月16日 03:01</dd>
+                                            <dd>${sinfo.sellerStime}</dd>
                                             <dt>服务到期：</dt>
-                                            <dd>2019年 02月16日 03:01</dd>
+                                            <dd>${sinfo.sellerEtime}</dd>
                                             <dt>团队成员：</dt>
-                                            <dd>12人</dd>
+                                            <dd>${sinfo.sellerNumb}人</dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -734,24 +625,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Mainly scripts -->
-    <script src="../static/js/jquery-2.1.1.min.js"></script>
-    <script src="../static/js/bootstrap.min.js?v=3.4.0"></script>
-    <script src="../static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="../static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- Flot -->
-    <script src="../static/js/plugins/flot/jquery.flot.js"></script>
-    <script src="../static/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="../static/js/plugins/flot/jquery.flot.resize.js"></script>
-    <!-- Peity -->
-    <script src="../static/js/plugins/peity/jquery.peity.min.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="../static/js/hplus.js?v=2.2.0"></script>
-    <script src="../static/js/plugins/pace/pace.min.js"></script>
-
 
 </body>
 

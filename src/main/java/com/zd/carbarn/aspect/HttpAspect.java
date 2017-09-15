@@ -23,7 +23,7 @@ public class HttpAspect {
 
 
     //在请求到达之前  拦截验证
-    @Pointcut("execution(public * com.zd.carbarn.service..*.*(..))")
+    @Pointcut("execution(public * com.zd.carbarn.controller..*.*(..))")
     public void log() {
     }
 

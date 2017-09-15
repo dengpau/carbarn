@@ -37,7 +37,7 @@ public class UserService {
         User user = userRepository.findUserByPhoneNumAndPasswd(uname,pwd);
         if(user != null){
             System.out.println("登录成功！");
-        }else{
+        }else {
             System.out.println("登录失败！");
         }
         return user;
